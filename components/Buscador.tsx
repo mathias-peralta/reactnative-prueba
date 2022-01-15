@@ -4,8 +4,8 @@ import PeliculaContext from '../context/peliculaContext';
 
 
 const Buscador = () => {
-    const [title, setTitle] = useState('');
-    const [year, setYear] = useState('');
+    const [title, setTitle] = useState('No Time to die');
+    const [year, setYear] = useState('2021');
     const context = useContext(PeliculaContext);
 
     const styles = StyleSheet.create({
@@ -33,10 +33,15 @@ const Buscador = () => {
         }
     });
     const handleButton = () => {
-        context.getPelicula(title, year);
-        
-        setTitle('');
-        setYear('');
+        if(title == '' || year == ''){
+            alert('Debe ingresar Titulo y Año')
+        }else{
+            context.getPelicula(title, year);
+            //seteamos los inputs a strings vacios
+            setTitle('');
+            setYear('');
+        }
+
     }
     return(
         <View style={[styles.customBorder]}>

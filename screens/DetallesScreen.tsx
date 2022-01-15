@@ -32,7 +32,8 @@ const DetallesScreen = () => {
             marginBottom: 5
         },
         fontBold: {
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            color: '#2E86C1'
         }
     })
     return(
