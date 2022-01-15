@@ -32,6 +32,8 @@ const Buscador = () => {
     });
     const handleButton = () => {
         console.log(title, year);
+        setTitle('');
+        setYear('');
     }
     return(
         <View style={[styles.customBorder]}>
@@ -43,6 +45,7 @@ const Buscador = () => {
                     placeholder='Ingrese el Titulo de la Pelicula'
                     style={[styles.customInput]}
                     onChange={(e) => setTitle(e.nativeEvent.text)}
+                    defaultValue={title}
                 />
             </View>
             <View>
@@ -50,6 +53,8 @@ const Buscador = () => {
                     placeholder='Ingrese el Año'
                     style={[styles.customInput]}
                     onChange={(e) => setYear(e.nativeEvent.text)}
+                    defaultValue={year}
+
                 />
             </View>
             <Button
