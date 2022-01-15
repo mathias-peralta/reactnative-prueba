@@ -2,7 +2,7 @@
 
 Imagenes:
 <div>
-    <img src="./Public/Img/1.png">
-    <img src="./Public/Img/2.png">
-    <img src="./Public/Img/3.png">
+    <img src="./Public/Img/1.png" width="300px" height="500">
+    <img src="./Public/Img/2.png" width="300px" height="500">
+    <img src="./Public/Img/3.png" width="300px" height="500">
 </div>
