@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
 import PeliculasContext from './peliculaContext';
 import axios from 'axios';
-import {API_KEY} from '../global'
+import {API_KEY} from '@env';
+
 
 const PeliculaState = (props) => {
     const [data, setData] = useState(null);
     const [IdPelicula, setIdPelicula] = useState('');
 
     const getPelicula =  async (title: string, year: string) => {
+        
         try{
             const data = await axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&y=${year}&t=${title}`);
             setData(data.data);

@@ -33,6 +33,7 @@ const Buscador = () => {
         }
     });
     const handleButton = () => {
+        //validamos que los inputs no esten vacios
         if(title == '' || year == ''){
             alert('Debe ingresar Titulo y Año')
         }else{
