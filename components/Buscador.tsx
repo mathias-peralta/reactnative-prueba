@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {View, TextInput, StyleSheet, Button, Text} from 'react-native'
+import PeliculaContext from '../context/peliculaContext';
 
 
 const Buscador = () => {
     const [title, setTitle] = useState('');
     const [year, setYear] = useState('');
+    const context = useContext(PeliculaContext);
 
     const styles = StyleSheet.create({
         customBorder: {
@@ -32,6 +34,8 @@ const Buscador = () => {
     });
     const handleButton = () => {
         console.log(title, year);
+        context.getPelicula(title, year);
+        
         setTitle('');
         setYear('');
     }
