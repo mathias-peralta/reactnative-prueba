@@ -35,6 +35,12 @@ const PeliculaResult = () => {
         },
         customButton:{
             marginTop: 10
+        },
+        fontBold: {
+            fontWeight: 'bold'
+        },
+        text: {
+            marginBottom: 5
         }
     })
     return(
@@ -51,19 +57,11 @@ const PeliculaResult = () => {
                                         <Text style={[styles.customTitle]}>
                                             {context.data.Title}
                                         </Text>
-                                        {  
-                                            (
-                                                context.data.Ratings.map((rating) => (
-                                                    <Text key={rating.Value}>
-                                                        {rating.Source} - {rating.Value}
-                                                    </Text>
-                                                ))
-                                            )
-
-                                        }
-
-                                        <Text>
-                                            Descripción: {context.data.Plot}
+                                        <Text style={[styles.text]}>
+                                            <Text style={[styles.fontBold]}>IMDb:</Text> {context.data.imdbRating}/10
+                                        </Text>
+                                        <Text style={[styles.text]}>
+                                            <Text style={[styles.fontBold]}>Descripción:</Text> {context.data.Plot}
                                         </Text>
                                         <Button 
                                             title="saber más" 

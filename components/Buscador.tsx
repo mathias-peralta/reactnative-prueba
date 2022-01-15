@@ -33,7 +33,6 @@ const Buscador = () => {
         }
     });
     const handleButton = () => {
-        console.log(title, year);
         context.getPelicula(title, year);
         
         setTitle('');
