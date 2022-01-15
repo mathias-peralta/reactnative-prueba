@@ -3,6 +3,7 @@ import PeliculasContext from './peliculaContext';
 import axios from 'axios';
 import {API_KEY} from '@env';
 
+console.log(API_KEY);
 
 const PeliculaState = (props) => {
     const [data, setData] = useState(null);
