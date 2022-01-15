@@ -1,10 +1,14 @@
 import React, {useContext} from 'react';
 import {View, Text, StyleSheet, Image, Button} from 'react-native';
 import PeliculaContext from '../context/peliculaContext';
+import { useNavigation } from "@react-navigation/native";
+
 
 const PeliculaResult = () => {
+    //hooks
     const context = useContext(PeliculaContext);
-    console.log('ok',context.data);
+    const navigation = useNavigation();
+
     const styles = StyleSheet.create({
         container: {
             margin: 15,
@@ -63,7 +67,7 @@ const PeliculaResult = () => {
                                         </Text>
                                         <Button 
                                             title="saber más" 
-                                            onPress={() => {}} 
+                                            onPress={() => navigation.navigate('DetallesScreen')} 
                                             style={[styles.customButton]}
                                         />
                                     </View>
